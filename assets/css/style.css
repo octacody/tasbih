@@ -394,3 +394,51 @@
         .logo{
             width: 200px;
         }
+
+
+
+
+
+        /* Loading State Styles */
+.download-btn.is-loading {
+    pointer-events: none; /* Prevents double-clicking */
+    transform: scale(0.98);
+    box-shadow: 0 5px 15px rgba(127, 103, 91, 0.15);
+    background: linear-gradient(135deg, var(--accent-light), var(--accent-color));
+    justify-content: center;
+}
+
+/* Elegant Spinner */
+.spinner {
+    animation: rotate 2s linear infinite;
+    width: 24px;
+    height: 24px;
+    margin-right: 8px; /* Spacing for Arabic RTL */
+}
+
+.spinner .path {
+    stroke: #ffffff;
+    stroke-linecap: round;
+    animation: dash 1.5s ease-in-out infinite;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes dash {
+    0% {
+        stroke-dasharray: 1, 150;
+        stroke-dashoffset: 0;
+    }
+    50% {
+        stroke-dasharray: 90, 150;
+        stroke-dashoffset: -35;
+    }
+    100% {
+        stroke-dasharray: 90, 150;
+        stroke-dashoffset: -124;
+    }
+}
